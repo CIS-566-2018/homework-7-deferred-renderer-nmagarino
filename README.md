@@ -66,6 +66,7 @@ reconstruct the camera-space X and Y of our fragment based on just its
 screen-space position. Given the UV coordinates of a fragment, map them to
 [-1, 1] NDC space, then apply the ray casting algorithm found on page 18 of
 [these slides](https://docs.google.com/presentation/d/e/2PACX-1vSNy2AZVsoTFcstvadcN76wLX8vouFxEaWWhz8olaxCDhTFiwt5mJXIkK1hKeIhU6vxrkUoVIod-WYG/pub?start=false&loop=false&delayms=3000) to project the point into camera space (just use default X/Y/Z axes for the
+
 right/up/forward vectors instead of the world-space camera vectors).
 
 ## HDR Tone Mapping (5 points)
@@ -99,3 +100,8 @@ around. You should also account for the motion of the camera when you output vel
 * Shadow mapping (25 points)
 * Custom 3D scene with new OBJs and textures (5 - 10 points)
 * Screen-space ambient occlusion (30 points)
+
+## READ-ME
+PennKey: nmaga
+Live demo:
+
