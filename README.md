@@ -1,5 +1,4 @@
 
-
 ## READ-ME
 PennKey: nmaga
 
@@ -14,8 +13,10 @@ Different post process shaders can be toggled with the drop down menu.  I implem
 ![](wahooDOF.PNG)
 
 Then, I tried Bloom, where colors with a high enough luminosity are guassian blurred and added onto the original base pixel color.
+
 ![](wahooBloom.PNG)
 
 Lastly, there is a sort of crosshatched pen-drawn shader.  I did a crosshatch affect based on an implementation from: (https://machinesdontcare.wordpress.com/2011/02/02/glsl-crosshatch/), then I used Sobel edge detection to create the outlines.
+
 ![](wahooCrosshatch.PNG)
 
