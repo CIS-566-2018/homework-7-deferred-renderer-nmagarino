@@ -59,7 +59,8 @@ In `deferred-render.glsl`, take the G-Buffer data you output from the standard s
 * An interesting procedural backdrop for your model. For example, this could be a raytraced skybox, or a time-offset noise-based image. You might have an easier time adding this to the scene output if you add a G-Buffer that stores whether or not a pixel is overlapped by a mesh.
 
 In the G-Buffer step above, you only output the camera-space depth of your
-fragment rather than all three positional coordinates. Part of the reasoning
+  fragment rather than all three positional coordinates. Part of the reasoning
+
 behind this is that we want to use as little memory as possible to store our
 G-Buffers, so we only made one 32-bit buffer. The other reason is that we can
 reconstruct the camera-space X and Y of our fragment based on just its
@@ -69,8 +70,7 @@ screen-space position. Given the UV coordinates of a fragment, map them to
 
 right/up/forward vectors instead of the world-space camera vectors).
 
-
-## HDR Tone Mapping (5 points)
+, w## HDR Tone Mapping (5 points)
 In `tonemap-frag.glsl`, implement one of the tone mapping algorithms listed on the [Filmic Worlds blog](http://filmicworlds.com/blog/filmic-tonemapping-operators/).
 
 ## Post-process effects (75 points)
@@ -108,5 +108,16 @@ PennKey: nmaga
 Live demo: https://nmagarino.github.io/homework-7-deferred-renderer-nmagarino/
 
 The scene begins with no post process shaders and a worley noise background.  Rendered with a Lambert shader are Wahoo and G̝̻̞͖̝͘r̜̮̞è̫͕͔͔̙e̝̰̖̰̱͍͝n̪̙͈͕̯ ͖̻͇͞W̩̬̤̺̖͠a̸̘͇͍̣̦̰̬h̛̺͕̹͙o͚̰͉̮̠o.
+
 ![](wahooNone.PNG)
+
+Different post process shaders can be toggled with the drop down menu.  I implemented depth of field, where anything beyond a certain depth is rendered with an applied Gaussian blur.
+
+![](wahooDOF.PNG)
+
+Then, I tried Bloom, where colors with a high enough luminosity are guassian blurred and added onto the original base pixel color.
+![](wahooBloom.PNG)
+
+Lastly, there is a sort of crosshatched pen-drawn shader.  I did a crosshatch affect based on an implementation from: (https://machinesdontcare.wordpress.com/2011/02/02/glsl-crosshatch/), then I used Sobel edge detection to create the outlines.
+![](wahooCrosshatch.PNG)
 
