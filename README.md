@@ -69,6 +69,7 @@ screen-space position. Given the UV coordinates of a fragment, map them to
 
 right/up/forward vectors instead of the world-space camera vectors).
 
+
 ## HDR Tone Mapping (5 points)
 In `tonemap-frag.glsl`, implement one of the tone mapping algorithms listed on the [Filmic Worlds blog](http://filmicworlds.com/blog/filmic-tonemapping-operators/).
 
@@ -103,5 +104,9 @@ around. You should also account for the motion of the camera when you output vel
 
 ## READ-ME
 PennKey: nmaga
-Live demo:
+
+Live demo: https://nmagarino.github.io/homework-7-deferred-renderer-nmagarino/
+
+The scene begins with no post process shaders and a worley noise background.  Rendered with a Lambert shader are Wahoo and G̝̻̞͖̝͘r̜̮̞è̫͕͔͔̙e̝̰̖̰̱͍͝n̪̙͈͕̯ ͖̻͇͞W̩̬̤̺̖͠a̸̘͇͍̣̦̰̬h̛̺͕̹͙o͚̰͉̮̠o.
+![](wahooNone.PNG)
 
